@@ -1,0 +1,60 @@
+<div class="row">
+    <!-- 0072ff -->
+    
+    <div class="cardCover">
+        <div class="card cardStyle">
+            <div class="card-body">
+                <div >
+                    {{previousCount}}
+                    <div class="iconCover"> <i style="color: #0072ff;" class="fa fa-user icon" id="icon0" aria-hidden="true"></i> <hr class="line" id="line0"> </div>
+                    
+                    <div class="iconCover" style="left: 82px;"> <i  class="fa fa-envelope icon" id="icon1" aria-hidden="true"></i> <hr class="line" id="line1"> </div>
+                    
+                    <div class="iconCover" style="left: 165px;"> <i class="fa fa-mobile icon" id="icon2" aria-hidden="true"></i> <hr class="line" id="line2"> </div>
+                   
+                    <div class="iconCover" style="float: right;"> <i class="fa fa-address-card icon" id="icon3" aria-hidden="true"></i> </div>
+                </div>
+                <div class="inputCover" *ngIf="nameFlag"> 
+                    <input id="name" [(ngModel)]="name" type="text" placeholder="Enter Name" (blur)="checkValidation(1)">
+                </div>
+                <div class="inputCover" *ngIf="emailFlag"> 
+                    <input id="email" [(ngModel)]="email" type="text" placeholder="Enter Email" (blur)="checkValidation(2)" >
+                </div>
+                <div class="inputCover" *ngIf="phoneFlag"> 
+                    <input id="mobile" [(ngModel)]="phone" type="text" placeholder="Enter Mobile Number" (blur)="checkValidation(3)">
+                </div>
+                <div class="inputCover" *ngIf="addressFlag"> 
+                    <textarea id="address" class="textArea" [(ngModel)]="address" name="address" placeholder="Enter address" (blur)="checkValidation(4)"></textarea>
+                    <div *ngIf="addFlag" class="addButton" (click)="addUser()"> Add User </div>
+                </div>
+            </div>
+          </div>
+    </div>
+    <div class="showUserCover">
+        <div class="addButton" *ngIf="userArray.length == 0"> No User(s) in List </div>
+        <!--  -->
+        <div  class="row" *ngIf="userArray.length != 0">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3" *ngFor="let user of userArray">
+                <div class="accordion" id="accordionExample" style="margin: 16px 0 0">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + user.id" aria-expanded="true" [attr.aria-controls]="'collapse'+user.id">
+                            <div class="headerCover">
+                                <div class="nameLable"> {{user.name}} <br> <span> {{user.email}} </span> </div>
+                                <div class="delete" (click)="deleteUser(user)"> <i class="fa fa-trash" aria-hidden="true"></i> </div>
+                            </div>
+                        </button>
+                      </h2>
+                      <div [id]="'collapse'+ user.id" class="accordion-collapse collapse" saria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div> Mobile :  {{ user.phone }} </div>
+                            <div> Address :  {{ user.address }} </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>

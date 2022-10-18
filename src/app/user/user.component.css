@@ -1,0 +1,100 @@
+.cardCover{
+    width: 563px;
+    padding: 0 0;
+    margin: 23px auto;
+}
+.cardStyle{
+    height: 243px;
+    background: #f1f2f3;
+    border: 1px solid #f1f2f3;
+}
+
+.iconCover {
+    border: 1px solid #fff;
+    width: fit-content;
+    padding: 8px 19px;
+    border-radius: 50%;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    -webkit-box-shadow: 12px 13px 14px -8px rgb(214 214 214);
+    -moz-box-shadow: 12px 13px 14px -8px rgba(214,214,214,1);
+    box-shadow: 12px 13px 14px -8px rgb(214 214 214);
+    font-size: 28px;
+    /* -webkit-box-shadow: 12px 13px 14px 0px rgb(214 214 214); */
+    -moz-box-shadow: 12px 13px 14px 0px rgba(214,214,214,1);
+    /* box-shadow: 12px 13px 14px 0px rgb(214 214 214); */
+}
+.iconCover hr {
+    position: absolute;
+    width: 78px;
+    height: 7px;
+    top: 12px;
+    left: 66px;
+    background: #fff;
+}
+.inputCover{
+    margin: 42px auto;
+    width: fit-content;
+}
+.inputCover input {
+    width: 266px;
+    text-align: center;
+    border: 1px solid #f1f2f3;
+    outline: none !important;
+}
+.inputCover address {
+    width: 266px;
+    text-align: center;
+    border: 1px solid #f1f2f3;
+    outline: none !important;
+}
+
+.textArea {
+    border: 1px;
+    outline: none !important;
+    width: 250px;
+}
+.addButton{
+    border: none;
+    width: fit-content;
+    padding: 4px 17px;
+    border-radius: 10px;
+    background: #8da3f3;
+    color: #fff;
+    margin: 18px auto 0;
+}
+
+.showUserCover{
+    border: 1px solid #f1f2f3;
+    width: 82%;
+    margin: 0 auto;
+    height: 301px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #f1f2f3;
+    border-radius: 14px;
+}
+.accordion-button::after {
+    display: none;
+}
+
+.headerCover{
+    width: 100%;
+    display: flex;
+    /* text-align: center; */
+    align-content: center;
+    align-items: center;
+    color: #000;
+}
+.nameLable{
+    width: 90%;
+}
+.nameLable span{
+    font-size: 15px;
+    padding: 0 0 0 10px;
+}
+.delete{
+    width: 10%;
+    color: red;
+}
